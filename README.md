@@ -1,15 +1,30 @@
-End-to-End Cloud-Based Data Analytics Solution (AWS & Power BI)
+# End-to-End Cloud-Based Data Analytics Solution
 
-Designed and implemented an automated cloud data analytics pipeline using AWS Free Tier.
+## Project Overview
+This project implements an automated cloud data analytics pipeline using AWS Free Tier services. The solution automates the flow of employee data from ingestion to visualization, eliminating manual reporting through serverless architecture and real-time database integration.
 
-Built a serverless ingestion workflow where Amazon S3 triggers AWS Lambda to process employee data automatically.
+## Architecture
+The pipeline follows a modern cloud data stack pattern:
+1.  **Data Ingestion**: Raw data files are uploaded to Amazon S3.
+2.  **Processing**: An S3 event trigger executes an AWS Lambda function.
+3.  **Storage**: The Lambda function processes and loads the data into an Amazon RDS (MySQL) instance.
+4.  **Visualization**: Power BI connects to RDS via a live connection for real-time reporting.
 
-Designed a scalable MySQL database on Amazon RDS with optimized schema for analytics queries.
+## Tech Stack
+* **Cloud Provider**: AWS (S3, Lambda, RDS)
+* **Database**: MySQL
+* **Languages**: SQL, Python (Boto3 for AWS SDK)
+* **BI Tool**: Power BI
 
-Integrated Power BI with live RDS connection to deliver real-time dashboards and insights.
+## Key Features
+* **Serverless ETL**: Built a fully automated ingestion workflow where AWS Lambda handles data processing without the need for managing servers.
+* **Scalable Data Warehousing**: Designed an optimized MySQL schema on Amazon RDS to support high-performance analytics queries and business KPIs.
+* **Automated Transformations**: Implemented SQL-based logic to clean and prepare data for downstream reporting.
+* **Real-time Insights**: Established a live connection between the cloud database and Power BI, replacing traditional static reports with interactive dashboards.
 
-Eliminated manual reporting by enabling fully automated data ingestion, storage, and visualization.
+## Impact and Benefits
+* **Automation**: Reduced manual data entry and reporting effort by 100% through automated pipelines.
+* **Data Integrity**: Minimized human error by implementing standardized processing logic within Lambda and SQL.
+* **Scalability**: Leveraged cloud-native services that can scale with increasing data volumes.
 
-Implemented SQL-based transformations to support business KPIs and reporting metrics.
 
-Tech Stack: AWS (S3, Lambda, RDS) | MySQL | SQL | Power BI
